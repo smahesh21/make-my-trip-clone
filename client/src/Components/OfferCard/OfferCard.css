@@ -1,0 +1,58 @@
+.offer-card{
+    height: 194px;
+    min-width: 462px;
+    box-shadow: rgb(0,0,0,0.2) 0px 1px 6px 0px;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px;
+    margin-left: 0;
+}
+.offer-card-image{
+    height: 134px;
+    width: 134px;
+    border-radius: 5px;
+}
+.offer-card-para{
+    color: #9b9b9b;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.image-description-container{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 0;
+}
+.item-description{
+    margin-top: 0;
+    text-align: left;
+}
+.offer-card-heading{
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+.offer-line{
+    color: red;
+    border-style: solid;
+    width: 40px;
+    display:inline-block;
+    margin-top: 0;
+    margin-bottom: 7px;
+}
+.booking-tc-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+.text{
+   font-size: 13px;
+   color: #9b9b9b;
+   width: 126px;
+   align-self: center;
+}
+.bookNowTxt{
+    color:  #008cff;
+    font-weight: 600;
+}

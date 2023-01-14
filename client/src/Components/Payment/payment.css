@@ -1,0 +1,60 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #000000D9;
+}
+.payment-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.payment-card {
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.paid-successfully {
+    color: green;
+}
+.payment-failed {
+    color: red;
+}
+.payment-send-button {
+    background-image: linear-gradient(93deg, #53b2fe, #065af3);
+    height: 40px;
+    width: 200px;
+    border-radius: 16px;
+    background-color: rgb(158, 158, 128);
+    border: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 18px;
+}
+.payment-heading{
+    margin-bottom: 10px;
+}
+.ticket-sent {
+    margin-top: 16px;
+}
+.go-to-home {
+    background-image: linear-gradient(97deg,#53b2fe,#065af3 130%);
+    color: white;
+    height: 42px;
+    width: 160px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 900;
+    margin-top: 18px;
+}

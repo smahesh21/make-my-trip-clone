@@ -1,0 +1,516 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-with-blur {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: blur(5px);
+}
+.blue-box-container{
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 0;
+
+    }
+.nav-and-menu-box {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    
+    }
+.navigation-bar{
+    display: flex;
+    width: 1200px;
+    margin: 5px;
+    justify-content: space-between;
+}
+.compony-logo{
+    cursor: pointer;
+    width:112px;
+    height: 35px;
+}
+.offerLogo{
+    width:25px;
+    height: 25px;
+    margin-top: 1px;
+}
+.offers-and-logos{
+    display: flex;
+}
+.offer-container{
+    display: flex;
+    cursor: pointer;
+}
+.offer-container > div > span{
+    font-size: 12px;
+    margin: -2px 0 0 10px;
+    font-weight: bold;
+    color: #ffff;
+    font-family:sans-serif;
+}
+.offer-container > div > p{
+    font-size: 10px;
+    color: #ffff;
+    margin: 0px 0 0 10px;
+    font-family:sans-serif;
+}
+.margin-nav-logo{
+    padding: 0 25px;
+}
+.my-biz-logo{
+    width: 44px;
+    height: 22px;
+}
+.mybiz-container{
+    display: flex;
+    cursor: pointer;
+}
+.mybiz-container > div >span {
+    font-size: 12px;
+    margin: -2px 0 0 10px;
+    font-weight: bold;
+    color: #ffff;
+    font-family:sans-serif;
+}
+.mybiz-container > div > p , .my-trip-container > div > p {
+    font-size: 10px;
+    color: #ffff;
+    margin: 0px 0 0 10px;
+    font-family:sans-serif;
+}
+.my-trip-container{
+    display: flex;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.my-trip-logo{
+    width:16px;
+    height: 25px;
+}
+.my-trip-container > div > span {
+    font-size: 14px;
+    margin: -2px 0 0 10px;
+    font-weight: bold;
+    color: #ffff;
+    font-family:sans-serif;
+}
+.my-logo{
+    width: 23px;
+    height: 22px;
+    padding: 0;
+    align-self: center;
+    cursor: pointer;
+}
+.header-landing-btn{
+    color: #fff;
+}
+.login-signup-btn{
+    cursor: pointer;
+    display: flex;
+    align-content: center;
+    height: 35px;
+    border-radius: 3px;
+    border:none;
+    color: white;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(84,182,201,1) 0%, rgba(9,47,121,1) 100%);  
+}
+.login-signup-btn > span {
+    align-self: center;
+    background-color: transparent;
+    border: none;
+}
+.menu-bar{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 34px;
+    z-index: 1;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    color:rgb(76, 68, 68);
+    border-radius: 10px;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+}
+.menuIconAndName-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 13px;
+}
+.menuIconAndName-container:hover{
+    color: #53b2fe;
+}
+.menu-icon{
+    width: 40px;
+    height:35px;
+    cursor: pointer;
+    /* padding: 10px; */
+}
+.menuIconAndName-container > p{
+    margin: 0;
+    padding: 3px;
+    font-size: 14px;
+}
+
+/* -----------------------------------Flight Details Box-----------------------------------------*/
+
+
+.flight-details-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: white;
+    border-radius: 15px;
+    color: black;
+    top:112px;
+    z-index: 0;
+    width: 1200px;
+    padding: 3rem 1rem 1rem 1rem;
+}
+.flight-type{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.flight-type-msg {
+    margin: 0;
+    padding: 0;
+}
+.flight-type-msg:hover {
+    cursor: pointer;
+    color: #008CFF;
+}
+.card-for-flight-details{
+    display: flex;
+    border-radius: 10px;
+    width: 100%;
+    padding: 0 ;
+    border: 1px solid #4a4a4a;
+}
+.from-card{
+    padding:  1rem;
+    width: 30%;
+    margin: 0;
+}
+.from-card p{
+    font-size: 20px;
+    margin: 0.5em;
+}
+.from-item-bold{
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.from-item-normal{
+    font-size: 15px;
+    border: none;
+    outline:none;
+    background-color: transparent;
+}
+.to-card{
+    padding:  1rem;
+    border-left: 1px solid #4a4a4a;
+    border-right: 1px solid #4a4a4a;
+    width: 30%;
+    margin: 0;
+}
+.select-element-styles{
+    font-size: 15px;
+}
+.landing-page-select-element {
+    width: 100%;
+    /* height: 30px; */
+    font-size: 37px;
+    font-weight: bold;
+    padding: auto;
+    background: transparent;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+.landing-page-select-element:hover {
+    color: #000000;
+}
+.to-card p{
+    font-size: 20px;
+    margin: 0.5em;
+}
+.departure-card{
+    width: 20%;
+    padding:  1rem;
+    margin: 0;
+}
+.departure-card p , .return-card p{
+    font-size: 20px;
+    margin-top: 15px;
+}
+.departure-card input , .return-card input{
+    border: none;
+    outline: none;
+    font-size: 27px;
+    background-color: transparent;
+   
+}
+.return-card{
+    width: 20%;
+    border-left: 1px solid #4a4a4a;
+    border-right: 1px solid #4a4a4a;
+    padding:  1rem;
+    margin: 0;
+}
+.forHoverClass:hover{
+    background-color: #f2f2f2;;
+}
+.fair-msg-and-type{
+    align-self: start;
+    display: flex;
+    padding: 20px 0;
+}
+.select-fair-msg{
+    width: 57%;
+    display: grid;
+    height: 55px;
+    grid-template-columns: repeat(6 , 1fr) ;
+    grid-template-rows: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 8;
+    padding: 0 10px;
+    border-radius: 5px;
+    margin-top:12px ;
+    background-color: #eaf5ff;
+}
+
+.fair-types{
+
+padding: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.fair-types label {
+    padding: 0px 0 0 5px;
+    margin: 0;
+    font-size: 12px;
+}
+.fair-types input {
+    padding: 0px;
+    margin: 10px;
+    font-size: 12px;
+}
+.fair-msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    font-size: 12px;
+}
+.search-btn{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    z-index: 1;
+    position: absolute;
+    margin-top:-10px ;
+    margin-left: -86px;
+    align-items: center;
+    justify-content: center;
+    width: 216px;
+    height: 50px;
+    background-image: var(--color-btn-primary-bg,linear-gradient(93deg,#53b2fe,#065af3));
+    border-radius: 34px;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+.search {
+    color: #fff;
+}
+
+.landing-search{
+    color: #fff;
+}
+.explore-more-card{
+    display: flex;
+    z-index: 1;
+    justify-content: space-evenly;
+    margin-top: -25px;
+    background-color: white;
+    color: black;
+    border-radius: 35px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.explore-more-item{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 15px;
+}
+.explore-more-item img{
+    margin-right: 12px;
+    width: 28px;
+    height: 28px;
+}
+.explore-more-item > div > p , .explore-more-item > p {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+.explore-more-item > div > span{
+    font-size: 12px;
+    color: #9b9b9b;
+}
+.explore-int-flights{
+    background-color: #fef6e8;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 15px;
+    border-left: 1px solid #d8d8d8  ;
+    border-right: 1px solid #d8d8d8  ;
+}
+.explore-int-flights img{
+    margin-right: 12px;
+    width: 28px;
+    height: 28px;
+}
+.explore-int-flights > div > p {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    color: black;
+}
+.explore-int-flights > div > span {
+    font-size: 12px;
+    color: #9b9b9b;
+}
+.trip-money{
+    border-left:1px solid #d8d8d8 ;
+}
+.mice{
+    border-right:1px solid #d8d8d8 ;
+}
+.offers-at-bottom{
+    width: 1200px;
+    padding: 5rem 0; 
+}
+.offers-headline{
+    padding: 1rem 0;
+    font-size: 10px;
+    color: #4a4a4a;
+    font-weight: bold;
+}
+.offers-options-detail{
+    font-size: 12px;
+    cursor: pointer;
+    color: #4a4a4a;
+}
+.web-details-sec-container{
+    width: 100%;
+    background-color: #e7e7e7;
+    display: flex;
+    padding: 3rem 0;
+    justify-content: center;
+}
+.website-details-section{
+    margin: 0;
+    width: 1200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.website-details-section > div > h5{
+padding: 1rem 0;
+}
+.offer-sec-mid{
+    padding: 0 2rem;
+}
+.footer-section{
+    display: flex;
+    padding: 3rem 0;
+    justify-content: center;
+    background-color: black;
+    width: 100%;
+    color: white;
+}
+.footer-items-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    width: 1200px;
+    color: white;
+}
+.anchor-element{
+    color: white;
+}
+.footer-sm-logo{
+    width: 30px;
+    height: 30px;
+    margin: 0 15px;
+    cursor: pointer;
+    color: white;
+}
+.logo-container > a > svg > path{
+    color: white;
+}
+.footer-msg-container p{
+    color: white;
+}
+
+
+
+
+
+.from-item{
+    width: 100px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    height: 30px;
+}
+.landing-page-input-element {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 30px;
+    font-weight: 600;
+    color: #000000;
+}
+.date-styling {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 30px;
+    font-weight: 600;
+    color: #000000;
+}

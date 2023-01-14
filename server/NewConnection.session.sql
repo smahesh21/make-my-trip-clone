@@ -1,0 +1,3 @@
+SELECT * FROM Ticket;
+
+ALTER TABLE Ticket DROP COLUMN Passenger_ID;

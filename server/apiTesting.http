@@ -1,0 +1,98 @@
+POST http://localhost:5000/api/register HTTP/1.1
+Content-Type: application/json 
+
+{
+    "Name":"SMAHESH",
+    "Password":"mahesh@123",
+    "Email":"smaheshsrisailam@gmail.com",
+    "mobile_no":"8328194507",
+    "Gender":"Male",
+    "Date_of_Birth":"1997-02-21"
+}
+
+
+####
+POST http://localhost:5000/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "Email":"smaheshsrisailam@gmail.com",
+    "Password":"mahesh@123"
+} 
+
+###
+POST http://localhost:5000/api/verifyOTP
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6Im5hZ2VuZHJhQGdtYWlsLmNvbSIsImlhdCI6MTY3MzM0MjIyNiwiZXhwIjoxNjczMzQyODI2fQ.o3qXqpmHYqk0r3WqcNv4q4BwXCrs6Zg87Vdsp0U4p5w
+Content-Type: application/json
+
+{
+    "OTP":"8652"
+}
+
+
+###
+PATCH http://localhost:5000/api/passwordreset
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InNtYWhlc2hzcmlzYWlsYW1AZ21haWwuY29tIiwiaWF0IjoxNjczMDgxNzA1LCJleHAiOjE2NzMwODIzMDV9.V6_vnT4VwsPajiUeOfKNIzDN1K4jqKegZ_bUX4NHBN0
+Content-Type: application/json
+
+
+{
+    "email": "smaheshsrisailam@gmail.com",
+    "oldPassword":"mahesh@123",
+    "newPassword": "mahesh@12345"
+} 
+
+###
+GET http://localhost:5000/api/flights/?search=&from_city=Hyderabad&to_city=Chennai
+
+###
+POST http://localhost:5000/api/passengers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InNtYWhlc2hzcmlzYWlsYW1AZ21haWwuY29tIiwiaWF0IjoxNjczMDc5NDU3LCJleHAiOjE2NzMwODAwNTd9.U_456Gk2HUJPvkfvb69t1jFeXRYh-H-dB8HVCyGzpEg
+Content-Type: application/json
+
+{
+    "Name": "Mahesh",
+    "Gender" : "Male",
+    "Email" : "mahesh@gmail.com",
+    "mobile_no" : "9898989898",
+    "Date_of_Birth": "1997-02-20"
+}
+
+### 
+GET http://localhost:5000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InNtYWhlc2hzcmlzYWlsYW1AZ21haWwuY29tIiwiaWF0IjoxNjczMDc5NDU3LCJleHAiOjE2NzMwODAwNTd9.U_456Gk2HUJPvkfvb69t1jFeXRYh-H-dB8HVCyGzpEg
+
+###
+GET http://localhost:5000/api/passengers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InNtYWhlc2hzcmlzYWlsYW1AZ21haWwuY29tIiwiaWF0IjoxNjczMDc5NDU3LCJleHAiOjE2NzMwODAwNTd9.U_456Gk2HUJPvkfvb69t1jFeXRYh-H-dB8HVCyGzpEg
+
+
+
+###
+POST http://localhost:5000/api/booking
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6Im5hZ2VuZHJhQGdtYWlsLmNvbSIsImlhdCI6MTY3MzM0MjIyNiwiZXhwIjoxNjczMzQyODI2fQ.o3qXqpmHYqk0r3WqcNv4q4BwXCrs6Zg87Vdsp0U4p5w
+Content-Type: application/json
+
+{
+    "Plane_ID": 101,
+    "Transaction_ID": "ABC125121"
+}
+
+###
+POST http://localhost:5000/api/ticket
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InNtYWhlc2hzcmlzYWlsYW1AZ21haWwuY29tIiwiaWF0IjoxNjczMzQ3OTE3LCJleHAiOjE2NzMzNDg1MTd9.rn2uZv12hCR5Mbe0UUn5SrJKkuXdATQwmT7ChkRkMvw
+Content-Type: application/json
+
+{
+    "Passenger_Name": "Mahesh",
+    "Ceat_Number": 12
+}
+
+###
+POST http://localhost:5000/api/razorpay
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InNtYWhlc2hzcmlzYWlsYW1AZ21haWwuY29tIiwiaWF0IjoxNjczNTI2NTgwLCJleHAiOjE2NzM1MjcxODB9.Q8WbtQRSAAuWqUQDJ8H7BA1-hTZZpL2WGTMIekukTJ4
+Content-Type: application/json
+
+{
+    "amount": 11111
+}

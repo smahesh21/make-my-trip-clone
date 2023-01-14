@@ -1,0 +1,303 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.main-container {
+    min-height: 100vh;
+    width: 100vw;
+    padding: 24px;
+    background-color: #e5eef4;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 60px;
+}
+.filter-section {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    right: 0;
+    height: 150px;
+    background-image: linear-gradient(0deg,#15457b,#051423);
+    z-index: 100;
+}
+.filters {
+    position: fixed;
+    top: 60px;
+    left: 260px;
+    right: 250px;
+    display: flex;
+    height: 150px;
+}
+@media screen and (max-width: 1025px) {
+    .filters {
+        left: 50px;
+        right: 50px;
+    }
+}
+.filter-cards {
+    height: 50px;
+    width: 250px;
+    background-color: #243135;
+    background-color: #FFFFFF1A;
+    margin: 10px;
+}
+.filter-card-text {
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #008CFF;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.select-element {
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    padding: auto;
+    background: transparent;
+    color: #e5eef4;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+}
+.flights-input-element {
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    padding: auto;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #e5eef4;
+    padding-left: 10px;
+}
+.filter-page-select-elements {
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    padding: auto;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #fff;
+    padding-left: 10px;
+}
+.filter-page-select-elements:hover {
+    color: #000;
+}
+.same-cities-error {
+    color: red;
+    font-size: 14px;
+}
+.search-button {
+    height: 40px;
+    width: 200px;
+    border-radius: 16px;
+    background-color: #c2c2c2;
+    border: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 18px;
+}
+.search-button-active {
+    background-image: linear-gradient(93deg, #53b2fe, #065af3);
+    height: 40px;
+    width: 200px;
+    border-radius: 16px;
+    background-color: rgb(158, 158, 128);
+    border: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 18px;
+}
+.fare-type-container {
+    position: fixed;
+    top: 140px;
+    left: 270px;
+    right: 250px;
+    width: 60%;
+    height: 50px;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.fare-type {
+    font-size: 14px;
+    color: #e5eef4;
+}
+.fare-type-items {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #364C63;
+    margin-left: 10px;
+}
+.radio-label-container {
+    border-right:1px solid #000;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.fare-type-radio-element {
+    margin-left: 10px;
+}
+.new {
+    color: red;
+    font-size: 12px;
+}
+.label-element {
+    color: #fff;
+    font-size: 14px;
+    margin-left: 10px;
+    padding-right: 10px;
+}
+@media screen and (max-width: 1025px) {
+    .fare-type-container {
+        width: 85%;
+        left:50px;
+        right: 50px;
+    }
+    .radio-element {
+        margin-left: 0px;
+    }
+}
+.sidebar-flightcards-container {
+    width: 75%;
+    margin-top: 130px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 16px;
+}
+@media screen and (max-width: 1025px) {
+    .sidebar-flightcards-container {
+        width: 100%;
+    }
+}
+.sidebar {
+    margin-right: 16px;
+    background-color: #ffffff;
+    padding: 16px;
+}
+.popular-filters {
+    font-size: 20px;
+    text-align: left;
+}
+.airlines {
+    margin-top: 16px;
+}
+.airline-names {
+    text-align: left;
+}
+.checkbox-label-container {
+    padding-top: 10px;
+}
+.airline-checkbox-label {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #000000D9;
+}
+.clear-filters {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #068CFF;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 30px;
+}
+.flights-cards {
+    margin-left: 16px;
+}
+.heading {
+    font-size: 24px;
+    color: #1e2231;
+    text-align: left;
+}
+.advisories-guidelines {
+    width: 100%;
+    height: 60px;
+    border-radius: 3px;
+    background-image: linear-gradient(to right, #fff,#f7fcdebd);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 12px;
+}
+.mysafety-logo {
+    height: 30px;
+    width: 30px;
+}
+.guidelines {
+    font-size: 14px;
+    text-align: left;
+    margin-left: 16px;
+    font-family: sans-serif;
+}
+.guidelines-description {
+    font-size: 12px;
+    text-align: left;
+    margin-left: 16px;
+    font-family: sans-serif;
+}
+.sortby-container {
+    display: grid;
+    grid-template-columns: 22% 22% 20% 24% 12%;
+    height: 50px;
+    background-color: #d1d9ddec;
+    padding-top: 16px;
+    border-radius: 2px;
+    margin-top: 12px;
+}
+.sort-by {
+    font-size: 14px;
+    color: #243135;
+    font-weight: 600;
+    padding-left: 20px;
+    text-align: center;
+}
+.departure-arrival {
+        font-size: 14px;
+        color: #243135;
+        padding-left: 20px;
+        text-align: center;
+}
+.arrival {
+    padding-right: 60px;
+}
+.price {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e2231;
+    text-align: left;
+    padding-left: 0px;
+}
+.failure-view {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.failure-heading {
+    font-size: 24px;
+}
+.loader {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
