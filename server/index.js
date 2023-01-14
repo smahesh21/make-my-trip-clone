@@ -13,6 +13,7 @@ const logger = require("./logger");
 const passwordResetApi = require('./Controllers/passwordResetController')
 const razorApi = require('./Controllers/razorpay')
 const app = express();
+const PORT = process.env.PORT || 5000
 
 app.use(express.json());
 
@@ -33,5 +34,5 @@ app.use('/api', passwordResetApi);
 
 
 app.listen(5000, ()=>{
-    logger.info("Server is running at http://localhost:5000")
+    logger.info(`Server is running at http://localhost:${PORT}`)
 })
