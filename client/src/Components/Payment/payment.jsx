@@ -2,7 +2,7 @@ import Cookies from 'js-cookie';
 import { useEffect,useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../Header/header'
-import { useFlightsData, usePassengerName, useSearch, useSeatNumber } from '../../context/mmtcontext';
+import { useFlightsData, usePassengerName, useSearch, useSeatNumber, useSeatNumberUpdate } from '../../context/mmtcontext';
 import './payment.css'
 
 
@@ -35,9 +35,10 @@ const Payment = ()=> {
     const passengerName = usePassengerName()
     const seatNumber = useSeatNumber()
     const flight = useFlightsData()
+    const setSeatNumber = useSeatNumberUpdate()
 
     const jwtToken = Cookies.get("jwt_token")
-    const amount = otherServices + feeAndSurcharges + parseInt(flight.price)
+    const amount = otherServices + feeAndSurcharges + seatNumber.length * flight.price
 
     const navigate = useNavigate()
    
@@ -71,7 +72,7 @@ const Payment = ()=> {
               };
     
             
-            const response = await fetch("http://localhost:5000/api/razorpay", razorpayOptions);
+            const response = await fetch("https://mmt-project-backend.vercel.app/api/razorpay", razorpayOptions);
             
             if (response.ok) {
                 const data = await response.json();
@@ -121,7 +122,7 @@ const Payment = ()=> {
 
         const ticketData = {
             Passenger_Name: passengerName,
-            Ceat_Number : seatNumber
+            Ceat_Number : seatNumber.join(",")
           }
 
         async function ticketApi() {
@@ -135,7 +136,7 @@ const Payment = ()=> {
               body: JSON.stringify(ticketData),
             };
       
-            const response = await fetch("http://localhost:5000/api/ticket",options)
+            const response = await fetch("https://mmt-project-backend.vercel.app/api/ticket",options)
             if (response.ok) {
               console.log(response)
               setIsTicketSent(true)
@@ -144,6 +145,7 @@ const Payment = ()=> {
 
           if (isClickedOnSend) {
             ticketApi()
+            setSeatNumber([])
           }
 
           return () => {

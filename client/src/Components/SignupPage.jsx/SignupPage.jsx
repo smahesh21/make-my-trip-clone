@@ -49,7 +49,7 @@ function SignupPage() {
              },
              body:JSON.stringify(signUpJsonData),
           }
-         const response =  await fetch("http://localhost:5000/api/register", options);
+         const response =  await fetch("https://mmt-project-backend.vercel.app/api/register", options);
          const data = await response.json();
          console.log(data);
          setSignUpMsg(data.msg);

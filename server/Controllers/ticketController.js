@@ -10,10 +10,8 @@ router.post('/ticket',authenticateToken, (request,response) => {
     try {
         const {Passenger_Name,Ceat_Number} = request.body 
         const {Email} = request;
-        const isValidId = (id) => {
-            const regex = /^[0-9]+$/;
-            return regex.test(id)
-          }
+        console.log(Ceat_Number)
+
           const isValidName = (name) => {
             const regex = /^[a-zA-Z ]{2,30}$/;
             return regex.test(name)
@@ -21,8 +19,6 @@ router.post('/ticket',authenticateToken, (request,response) => {
 
           if (!isValidName(Passenger_Name)) {
             response.status(400).json({"Message":`Provided Passenger Name: ${Passenger_Name} is not a valid name.`})
-          } else if (!isValidId(Ceat_Number)) {
-            response.status(400).json({"Message":`Provided Ceat Numer: ${Ceat_Number} is not valid.`})
           } else {
             const toGetTheBookingId = `
             SELECT Bookings.Booking_ID 
@@ -37,7 +33,7 @@ router.post('/ticket',authenticateToken, (request,response) => {
                 console.log(bookingid[bookingid.length - 1].Booking_ID)
                 const storingTheTicketDetails = `
                   INSERT INTO Ticket (Booking_ID,Passenger_Name,Ceat_Number)
-                  VALUES (${bookingid[bookingid.length - 1].Booking_ID},"${Passenger_Name}",${Ceat_Number});
+                  VALUES (${bookingid[bookingid.length - 1].Booking_ID},"${Passenger_Name}","${Ceat_Number}");
                 `
                   dbConnection.query(storingTheTicketDetails, (error) => {
                     if(error){

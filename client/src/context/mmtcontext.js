@@ -50,7 +50,7 @@ export const ContextProvider = ({children}) => {
     const [flights,setFlights] = useState([])
     const [departureDate,setDepartureDate] = useState("")
     const [passengerName, setPassengerName] = useState("")
-    const [seatNumber, setSeatNumber] = useState("")
+    const [seatNumber, setSeatNumber] = useState([])
 
     const updateSearchAction = () => setIsClickedOnSearch(prev=>!prev)
     const updateFromCityAction = (event) => setFromCity(event.target.value)

@@ -1,4 +1,4 @@
-import { useFlightsData,usePassengerName, usePassengerNameUpdate } from '../../context/mmtcontext'
+import { useFlightsData,usePassengerName, usePassengerNameUpdate, useSeatNumber } from '../../context/mmtcontext'
 import Popup from 'reactjs-popup'
 import {BsArrowRight} from 'react-icons/bs'
 import {BiRupee} from 'react-icons/bi'
@@ -24,7 +24,7 @@ const Booking = () => {
     const flights = useFlightsData()
     const passengerName = usePassengerName()
     const setPassengerName = usePassengerNameUpdate()
-    
+    const seatNumber = useSeatNumber()
 
     const feeAndSurcharges = 652
     const otherServices = 10
@@ -72,6 +72,7 @@ const Booking = () => {
         setValue(true);
         let passengerGender = null;
         const radioInputEl = document.querySelectorAll('input[type="radio"]');
+
         for (let inputEl of radioInputEl){
             if(inputEl.checked){
                 passengerGender = inputEl.value;
@@ -85,19 +86,14 @@ const Booking = () => {
              "mobile_no": passengerMobileNo.current.value, 
              "Date_of_Birth":passengerDate.current.value
         }
-
-        setJsonData(jsonData);
-
-        console.log(jsonData)
-        
+        setJsonData(jsonData);   
     }
-
-    
 
     useEffect(()=>{
          box = document.getElementById('travel-slider-container');
          box1 = document.getElementById('travel-claim-slider-container');
     },[])
+
     const jwtToken = Cookies.get("jwt_token");
 
     useEffect(()=>{
@@ -114,7 +110,7 @@ const Booking = () => {
                 },
                 body:JSON.stringify(jsonData),
             }
-            const response =  await fetch("http://localhost:5000/api/passengers", options)
+            const response =  await fetch("https://mmt-project-backend.vercel.app/api/passengers", options)
             if(response.ok){
                 setIsClickedOnBookingContinue(true);
             }else{
@@ -550,7 +546,7 @@ const Booking = () => {
                         </div>
                         <div className='total-amount-container'>
                             <h1 className='total-amount'>Total Amount</h1>
-                            <h1 className='total-amount'><BiRupee />{flights.price + feeAndSurcharges + otherServices}</h1>
+                            <h1 className='total-amount'><BiRupee />{seatNumber.length * flights.price + feeAndSurcharges + otherServices}</h1>
                         </div>
                     </div>
                     <div className='second-container'>

@@ -20,7 +20,7 @@ router.post("/razorpay", authenticateToken, async (req, res)=> {
         const currency = "INR";
         
         const options =  {  
-            amount : (amount*100).toString(),
+            amount : (amount).toString(),
             currency, 
             receipt: shortid.generate(), 
             payment_capture

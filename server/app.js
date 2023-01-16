@@ -36,9 +36,10 @@ app.use('/api', passwordResetApi);
 
 app.use(express.static(path.join(__dirname,'../client/build')))
 
-app.get("*", (_,response)=> {
+app.get("/", (_,response)=> {
+    app.use(express.static(path.resolve(__dirname,"client","build")))
     response.sendFile(
-        path.join(__dirname,'../client/build/index.html', (error) => {
+        path.resolve(__dirname,'client','build','index.html', (error) => {
             if (error) {
                 response.status(500).send({"Message": error.message})
             }

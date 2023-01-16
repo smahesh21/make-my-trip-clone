@@ -14,8 +14,6 @@ function BookingSeat() {
   const setSeatNumber = useSeatNumberUpdate()
   const [isClickedOnContinue, setIsClickedOnContinue] = useState(false);
 
-  console.log(seatNumber)
-
   const jwtToken = Cookies.get("jwt_token");
 
   const navigate = useNavigate();
@@ -36,11 +34,11 @@ function BookingSeat() {
         body: JSON.stringify(bookingData),
       };
       const response = await fetch(
-        "http://localhost:5000/api/booking",
+        "https://mmt-project-backend.vercel.app/api/booking",
         options
       );
       if (response.ok) {
-        if (seatNumber !=="") {
+        if (seatNumber !==[]) {
           navigate("/payment");
         } else{
           console.log("Please select your seat")
@@ -66,7 +64,7 @@ function BookingSeat() {
   };
 
   const handleCeatNumber = (event) => {
-    setSeatNumber(event.target.value);
+    setSeatNumber(prev=>([...prev, event.target.value]));
   };
 
   return (
@@ -1062,7 +1060,7 @@ function BookingSeat() {
             
             <p>Skip add on</p>
           </div>
-          {seatNumber === "" ? <p className="seat-selection-error-message">Please select the seat</p>: null}
+          {seatNumber === [] ? <p className="seat-selection-error-message">Please select the seat</p>: null}
           <div className="add-on-card">
             <h2>Add on</h2>
             <p>
