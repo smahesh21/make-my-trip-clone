@@ -34,7 +34,7 @@ function BookingSeat() {
         body: JSON.stringify(bookingData),
       };
       const response = await fetch(
-        "https://mmt-project-backend.vercel.app/api/booking",
+        "https://make-my-trip-clone-olive.vercel.app/api/booking",
         options
       );
       if (response.ok) {

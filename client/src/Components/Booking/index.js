@@ -110,7 +110,7 @@ const Booking = () => {
                 },
                 body:JSON.stringify(jsonData),
             }
-            const response =  await fetch("https://mmt-project-backend.vercel.app/api/passengers", options)
+            const response =  await fetch("https://make-my-trip-clone-olive.vercel.app/api/passengers", options)
             if(response.ok){
                 setIsClickedOnBookingContinue(true);
             }else{

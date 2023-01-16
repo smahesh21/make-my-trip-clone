@@ -45,7 +45,7 @@ const Otp =()=>{
              },
              body:JSON.stringify(otpData),
          }
-         const response =  await fetch("http://localhost:5000/api/verifyOTP", options);
+         const response =  await fetch("https://make-my-trip-clone-olive.vercel.app/api/verifyOTP", options);
          const data = await response.json();
          setOtpMsg(data.msg);
          if(response.ok){
@@ -82,7 +82,7 @@ const Otp =()=>{
                  "Authorization": `Bearer ${jwt_token}`
              },
          }
-         const response =  await fetch("http://localhost:5000/api/resendOTP", options);
+         const response =  await fetch("https://make-my-trip-clone-olive.vercel.app/api/resendOTP", options);
          const data = await response.json();
      }
      fetchApi(); 

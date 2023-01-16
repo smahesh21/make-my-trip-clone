@@ -153,7 +153,7 @@ const FilterSection  = () => {
     const searchButtonStyle = airlineId !== "" ? "search-button-active" : "search-button"
 
     useEffect(()=>{
-        const apiUrl = `https://mmt-project-backend.vercel.app/api/flights/?search=${airlineId}&from_city=${fromCity}&to_city=${toCity}`
+        const apiUrl = `https://make-my-trip-clone-olive.vercel.app/api/flights/?search=${airlineId}&from_city=${fromCity}&to_city=${toCity}`
         const getFlightsData = async () => {
             const response = await fetch(apiUrl)
            

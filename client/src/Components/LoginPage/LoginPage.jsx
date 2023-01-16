@@ -43,7 +43,7 @@ function LoginPage(){
          },
          body:JSON.stringify(logJsonData),
      }
-     const response =  await fetch("https://mmt-project-backend.vercel.app/api/login", options);
+     const response =  await fetch("https://make-my-trip-clone-olive.vercel.app/api/login", options);
      const data = await response.json();
      const inFifteenMinutes = new Date(new Date().getTime() + 30 * 60 * 1000);
      Cookies.set("jwt_token", data.jwtToken, {expires:inFifteenMinutes});

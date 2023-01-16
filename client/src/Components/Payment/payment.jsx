@@ -72,7 +72,7 @@ const Payment = ()=> {
               };
     
             
-            const response = await fetch("https://mmt-project-backend.vercel.app/api/razorpay", razorpayOptions);
+            const response = await fetch("https://make-my-trip-clone-olive.vercel.app/api/razorpay", razorpayOptions);
             
             if (response.ok) {
                 const data = await response.json();
@@ -136,7 +136,7 @@ const Payment = ()=> {
               body: JSON.stringify(ticketData),
             };
       
-            const response = await fetch("https://mmt-project-backend.vercel.app/api/ticket",options)
+            const response = await fetch("https://make-my-trip-clone-olive.vercel.app/api/ticket",options)
             if (response.ok) {
               console.log(response)
               setIsTicketSent(true)
